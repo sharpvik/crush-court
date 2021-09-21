@@ -11,7 +11,7 @@
   </form>
 
   <div class="post" v-for="(post, i) in posts" :key="i">
-    <p>{{ post }}</p>
+    <pre>{{ post }}</pre>
   </div>
 
   <button class="more" @click="loadMorePosts">More</button>
@@ -125,8 +125,10 @@ form button {
   -moz-box-shadow: 0px 1px 5px 0px rgba(102, 102, 102, 0.5);
   box-shadow: 0px 1px 5px 0px rgba(102, 102, 102, 0.5);
 }
-.post p {
+.post pre {
   margin: 15px;
+  font-size: 16px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
 .more {
