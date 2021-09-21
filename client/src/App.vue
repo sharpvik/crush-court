@@ -129,6 +129,8 @@ form button {
   margin: 15px;
   font-size: 16px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .more {
