@@ -2,7 +2,11 @@
   <header>Crush Court</header>
 
   <form @submit="submitPost">
-    <input name="postText" v-model="postText" placeholder="Got smth to say?" />
+    <textarea
+      name="postText"
+      v-model="postText"
+      placeholder="Got smth to say?"
+    ></textarea>
     <button type="submit">Send</button>
   </form>
 
@@ -84,19 +88,21 @@ header {
 
 form {
   display: flex;
+  flex-direction: column;
   width: 95%;
   max-width: 650px;
   margin: 25px auto;
 }
-form input {
+form textarea {
   flex-grow: 2;
   font-size: 18px;
   padding: 10px 15px;
   border: none;
-  border-bottom: 3px solid var(--passive-blue);
+  border: 3px solid var(--passive-blue);
+  resize: vertical;
 }
-form input:focus {
-  border-bottom: 3px solid var(--active-blue);
+form textarea:focus {
+  border: 3px solid var(--active-blue);
 }
 form button {
   font-size: 18px;
